@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-extern "C" void _ZN7android10VectorImpl19reservedVectorImpl1Ev();
+/*extern "C" void _ZN7android10VectorImpl19reservedVectorImpl1Ev();
 extern "C" void _ZN7android10VectorImpl19reservedVectorImpl2Ev();
 extern "C" void _ZN7android10VectorImpl19reservedVectorImpl3Ev();
 extern "C" void _ZN7android10VectorImpl19reservedVectorImpl4Ev();
@@ -46,4 +46,4 @@ extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl5Ev() { }
 extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl6Ev() { }
 extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl7Ev() { }
 extern "C" void _ZN7android16SortedVectorImpl25reservedSortedVectorImpl8Ev() { }
-
+*/
