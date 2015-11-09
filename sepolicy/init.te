@@ -7,4 +7,6 @@ allow init root_block_device:blk_file write;
 allow init rootfs:chr_file { execute execute_no_trans };
 allow init socket_device:sock_file { create setattr unlink };
 allow init sysfs_vibrator:file getattr;
+allow init tad_socket:sock_file write;
+allow init tad_static:unix_stream_socket connectto;
 allow init wcnss_device:chr_file write;

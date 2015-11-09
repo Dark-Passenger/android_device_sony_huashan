@@ -3,5 +3,6 @@ allow qti_init_shell bluetooth_data_file:dir search;
 allow qti_init_shell bluetooth_data_file:file { getattr open read };
 allow qti_init_shell hci_attach_exec:file { execute execute_no_trans open read };
 allow qti_init_shell socket_device:sock_file write;
+allow qti_init_shell system_data_file:file open;
 allow qti_init_shell tad_socket:sock_file write;
 allow qti_init_shell tad_static:unix_stream_socket connectto;
