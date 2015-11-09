@@ -227,6 +227,8 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
 
+    mkdir /data/etc 0775
+
     # QCOM Sensors
     mkdir /data/system 0775 system system
     mkdir /data/system/sensors 0775 system system
@@ -282,7 +284,7 @@ service tad_static /sbin/tad_static /dev/block/platform/msm_sdcc.1/by-name/TA 0,
     seclabel u:r:tad_static:s0
 
 # Wi-Fi and BT MAC addresses
-service macaddrsetup /system/bin/macaddrsetup /sys/devices/platform/wcnss-wlan.0/wcnss_mac_addr
+service macaddrsetup /system/bin/macaddrsetup /sys/devices/platform/wcnss_wlan.0/wcnss_mac_addr
     user root
     disabled
     oneshot
@@ -293,6 +295,7 @@ on property:vold.post_fs_data_done=1
     # Wait for the file to be created by macaddrsetup
     wait /data/etc/bluetooth_bdaddr
     chown bluetooth bluetooth /data/etc/bluetooth_bdaddr
+    chmod 0644 /data/etc/bluetooth_bdaddr
 
 # Bluetooth
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
@@ -424,6 +427,7 @@ service thermanager /system/bin/thermanager /system/etc/thermanager.xml
     user root
     group root
     seclabel u:r:thermanager:s0
+#class late_start
 
 # Healthd
 service charger /sbin/healthd -c

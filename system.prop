@@ -1,6 +1,9 @@
 #
-# from device/somc/viskan/system.prop
+# from SONY Xperia SP .207 build.prop
 #
+ro.semc.product.model=C5303
+ro.semc.version.fs=GLOBAL-LTE
+ro.semc.version.fs_revision=12.0.A.1.211
 
 #
 # system props for the data modules

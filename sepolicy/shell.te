@@ -1,2 +1,3 @@
+#allow shell bluetooth_data_file:file setattr;
 allow shell su:process signal;
 allow shell tombstone_data_file:dir getattr;
