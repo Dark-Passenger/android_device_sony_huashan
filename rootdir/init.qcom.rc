@@ -189,6 +189,9 @@ on boot
 
 # msm specific files that need to be created on /data
 on post-fs-data
+    # Used for WiFi and BT MAC addresses
+    mkdir /data/etc 0775 root shell
+
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
 
@@ -200,6 +203,9 @@ on post-fs-data
 
     # to observe dnsmasq.leases file for dhcp information of soft ap.
     chown dhcp system /data/misc/dhcp
+
+    # Update WIFI MAC address
+    mkdir /data/misc/wifi/prima 0775 wifi wifi
 
     write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
     write /sys/devices/platform/wcnss_wlan.0/serial_number ${ro.serialno}
@@ -226,8 +232,6 @@ on post-fs-data
     chown system system /sys/devices/platform/msm_sdcc.2/polling
     chown system system /sys/devices/platform/msm_sdcc.3/polling
     chown system system /sys/devices/platform/msm_sdcc.4/polling
-
-    mkdir /data/etc 0775
 
     # QCOM Sensors
     mkdir /data/system 0775 system system
