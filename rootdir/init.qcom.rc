@@ -213,7 +213,6 @@ on post-fs-data
     mkdir /data/misc/wifi/prima 0775 wifi wifi
 
     write /sys/module/wcnss_ssr_8960/parameters/enable_riva_ssr 1
-    write /sys/devices/platform/wcnss_wlan.0/serial_number ${ro.serialno}
     write /dev/wcnss_wlan 1
 
     mkdir /data/tombstones 0771 system system
