@@ -4,9 +4,6 @@ type radio_efs_file, fs_type;
 # Glove Mode
 type sysfs_glove_mode, fs_type, sysfs_type;
 
-# Macaddr
-type sysfs_wlanmac, fs_type, sysfs_type;
-
 # Trim Area daemon
 type tad_socket, file_type;
 
